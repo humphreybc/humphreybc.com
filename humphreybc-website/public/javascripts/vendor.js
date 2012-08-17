@@ -13908,7 +13908,6 @@ defined (or the getView() must be overridden)');
 }).call(this);
 ;
 
-var redis = require("redis"),
-    client = redis.createClient();
-;
+var redis  = require("redis"),
+    client = redis.createClient();;
 
