@@ -1,0 +1,103 @@
+body
+  background-color green
+  font-family fonts
+  color #fff
+  -webkit-font-smoothing antialised
+  transition all 1000ms
+  padding 20px
+
+a
+  color darken(green, 15)
+  text-decoration none
+  transition all 150ms
+
+  &:hover
+    color darken(green, 30)
+
+#front-page
+
+  hr
+    background-color darken(green, 5)
+    border none
+    height 5px
+    margin 30px auto 40px
+
+  a#view-projects-link
+    color white
+
+    &:hover
+      color darken(green, 20)
+
+h1
+  font-weight 300
+  font-size 28px
+  margin 0px
+  padding 0px
+
+h2
+  font-weight 400
+  font-size font-medium
+  margin 0px
+  padding 0px
+
+.container
+  margin 20px auto
+  width 100%
+  text-align left
+
+.bio
+  overflow hidden
+  margin-top 20px
+
+.column 
+  width 100%
+  float left
+
+  p
+    font-size font-medium
+    line-height 32px
+    padding-right 20px
+
+h2
+  color #fff
+
+#social-icons
+  margin 40px 0px 0px
+  overflow hidden
+
+  ul
+    float left
+    padding 0px
+    margin 0px
+
+  li:hover
+      a
+        color white !important
+        transition all 250ms
+
+  a
+    cursor pointer
+    transition all 250ms
+    margin-right 20px
+
+@media screen and (min-width: 500px)
+
+  h1
+    font-size font-huge
+    margin 0px 0px 0px -5px
+
+  .container
+    width 75%
+
+  .column
+    width 50%
+
+    p
+      font-size font-small
+      line-height 28px
+      padding-right 40px
+
+@media screen and (min-width: 1150px)
+
+  .container
+    width 50%
