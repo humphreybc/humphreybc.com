@@ -20,7 +20,4 @@ http://modernizr.com/
 - Add meta information for Facebook / G+
 - Set HTTP cache expiry times
 - Set character encoding
-- Reorder CSS / JS calls to speed up site
-- Remove <ul>
-- Fix favicon HTML call so it passes validator
 - Add extra projects
