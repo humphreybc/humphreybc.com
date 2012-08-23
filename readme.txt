@@ -14,10 +14,3 @@ http://modernizr.com/
 1. Install node.js (http://nodejs.org)
 2. Run 'npm install' in root directory (you may have to sudo it)
 3. Run 'brunch w -s' and visit localhost:3333
-
-== TO DO ==
-
-- Add meta information for Facebook / G+
-- Set HTTP cache expiry times
-- Set character encoding
-- Add extra projects
