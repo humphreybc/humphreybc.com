@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	checkHash();
-	injectArticle();
+	// injectArticle();
 });
 
 $(window).on('hashchange',function() {
@@ -8,6 +8,9 @@ $(window).on('hashchange',function() {
 });
 
 $("#view-projects-link").click(showprojects);
+
+$("#dark-theme").click(darkTheme);
+$("#light-theme").click(lightTheme);
 
 function checkHash() {
     if (window.location.hash === "#projects") {
@@ -29,8 +32,18 @@ function hideprojects() {
 	$("#front-page").delay(500).fadeIn(500);
 }
 
-function injectArticle() {
-	if (window.location.pathname == "/blog.html") {
-		$('#blog-posts').load('articles/test.html');
-	}
+function darkTheme() {
+	$(".blog").removeClass('light');
+	$(".blog").addClass('dark');
 }
+
+function lightTheme() {
+	$(".blog").removeClass('dark');
+	$(".blog").addClass('light');
+}
+
+// function injectArticle() {
+// 	if (window.location.pathname == "/blog.html") {
+// 		$('#blog-posts').load('articles/test.html');
+// 	}
+// }
