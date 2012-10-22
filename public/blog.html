@@ -40,7 +40,27 @@
     <h1>The blog of hbc</h1>
       
       <div id="blog-posts">
+
+        <h2>Browse the source code on Github!</h2>
+        <div class="date">Monday, 22 October, 2012</div>
+
+        <p>I don't think I've mentioned anywhere on my website that the code for this website is in fact <a href="https://github.com/humphreybc/humphreybc.com">available on Github</a> for you to browse and clone.</p>
+
+        <p>Essentially this site is put together using <a href="http://nodejs.org">Node.js</a> with <a href="http://brunch.io">Brunch</a> (although a lot of stuff has been stripped out). Since there's no logic, all I'm using Node for is for the auto-reload module, <a href="http://learnboost.github.com/stylus/">Stylus</a> (a CSS precompilier), and some code compression.</p>
+
+        <p>I'm also using icon fonts on the homepage, thanks to the <a href="http://icomoon.io/">Icomoon icon set</a> which makes it super easy to pick what icons you want to use and chuck them in the website.</p>
+
+        <p>The font is Museo Slab (if you have it installed), or <a href="http://www.google.com/webfonts/specimen/Arvo">Arvo</a> as a fallback.</p>
+
+        <p>The website runs on an Ubuntu 12.04 Xen VPS hosted with <a href="http://prgmr.com/xen/">Prgrmr</a> and uses apache2 with it configured to point to the /public directory. There's also a basic cronjob set up that will run "git pull" every 30 minutes so I don't have to SSH in to the server to grab the latest changes I make.</p>
+
+        <p>You're welcome to clone and use the code to learn how to easily build your own static website using Node.js, but I do ask that you don't re-use it exactly as it stands for your own site.</p>
+
+        <p>Node is a wee bit overkill for this site, but Stylus and the live reload stuff does make building HTML and CSS extremely easy, and it's all very simple to being with one command.</p> 
+
         <h2>The first blog post.</h2>
+        <div class="date">Sunday, 21 October, 2012</div>
+
         <p>So this is my first blog post. I'm attempting to get a simple blog up and running using the existing site bits and pieces I have with Node.js.</p>
 
         <p>Right now, I have to type my blog post out by hand directly into this HTML file which is a wee bit shit. Ideally, I'd like to have the ability to:</p>
