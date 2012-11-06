@@ -41,6 +41,40 @@
       
       <div id="blog-posts">
 
+        <h2>On Windows 8...</h2>
+        <div class="date">Tuesday, 6 November, 2012</div>
+
+        <p>I upgraded my old Toshiba Satellite A200 to Windows 8 last week. Now my Windows machine isn't that old - I got it at the start of 2008 - and it still has some fairly decent specs (its ATI Radeon HD 2000 does okay), but it's been relegated to a gaming machine for Battlefield 2, Age of Empires II, Team Fortress, etc.</p>
+
+        <p>The upgrade went smoothly. Actually, that's an understatement. It went really well. A small 5mb exe download, a short wizard, pay via credit card, download the ~2GB or so, and it upgraded from Windows 7 to 8 in about 30 minutes without breaking anything.</p>
+
+        <p>Except one crucial thing.</p>
+
+        <p>It appears that Microsoft upgraded <a href="http://en.wikipedia.org/wiki/Windows_Display_Driver_Model">WDDM</a> to version 1.2 in Windows 8, which apparently breaks OpenGL functionality on older (ATI) graphics cards. This means that hardware acceleration won't work in anything with OpenGL - pretty much every game under the sun, and Photoshop.</p>
+
+        <p>Indeed it was broken. As I soon found out, Battlefield 2 became a moving slideshow at around 10 FPS. Disappointing! The solution was to revert to older drivers. Microsoft don't make it easy to revert back to old graphics drivers in Windows 8. You have to do a bit of tomfoolery, and turn off the <a href="http://en.wikipedia.org/wiki/WHQL_Testing">WHQL certification stuff.</a></p>
+
+        Luckily <a href="http://www.lockergnome.com/windows/2012/09/29/make-your-old-graphics-drivers-work-in-windows-8/">I found a rather difficult to follow blog post</a> which eventually helped me install the old drivers. In a nutshell, you have to:</p>
+
+        <ul>
+          <li>Download your drivers off ATI/AMD's website</li>
+          <li>Install them and let them fail</li>
+          <li>Install this thing called MobilityModder</li>
+          <li>Patch MobilityModder and run it</li>
+          <li>Turn off WHQL at the command line</li>
+          <li>Fiddle around with Device Manager</li>
+          <li>Enable your old drivers and restart.</li>
+        </ul>
+
+        <p>Some of the steps failed for me or gave errors (the tutorial is a bit crap) but I got there in the end, and low and behold, everything's fine, and my games work well again!</p>
+
+        <p>Windows 8 on the other hand is okay. It's actually not as crazy as I expected. Essentially just Windows 7 with the Metro interface shoved on top, it's fast, stable, and the design is clean and modern although obviously made for touch screens because everything is huge and using it without gestures especially can be a pain.</p>
+
+        <p>It's still got a few oddities. Many apps like Chrome and Skype have two versions: the desktop and the metro one which run independently of each other. Legacy apps are launched from the Metro interface and then kick you out to the desktop when they start. A lot of the traditional tools and settings are difficult to find, being hidden behind the Metro settings page which has about 10% the functionality of the trusty Control Panel.</p>
+
+        <p>It's obvious Microsoft are trying to simplify the Windows experience and design. For example, there's no file browser in the Metro interface - which I think is the way to go - but Windows 8 will forever be considered that awkward transitionary release as we wait for legacy apps to be ported to Metroland.</p>
+
+
         <h2>Browse the source code on Github!</h2>
         <div class="date">Monday, 22 October, 2012</div>
 
