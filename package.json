@@ -1,9 +1,9 @@
 {
   "author": "Benjamin Humphrey",
-  "name": "package-name",
+  "name": "humphreybc-com",
   "description": "Source code for humphreybc.com",
-  "version": "0.0.1",
-  "homepage": "",
+  "version": "0.0.2",
+  "homepage": "humphreybc.com",
   "repository": {
     "type": "git",
     "url": ""
@@ -15,6 +15,8 @@
     "start": "brunch watch --server"
   },
   "dependencies": {
+
+    "node-markdown": "latest",
 
     "css-brunch": "> 1.0 < 1.3",
     "stylus-brunch": "> 1.0 < 1.3",
