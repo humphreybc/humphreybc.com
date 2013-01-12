@@ -1,46 +1,43 @@
+var checkHash, darkTheme, hideprojects, lightTheme, showprojects;
+
+checkHash = function() {
+  if (window.location.hash === "#projects") {
+    return showprojects();
+  } else {
+    return hideprojects();
+  }
+};
+
+showprojects = function() {
+  $("#front-page").hide();
+  $("body.main").css("background-color", "#c46d46");
+  return $("#projects").show();
+};
+
+hideprojects = function() {
+  $("#projects").hide();
+  $("body.main").css("background-color", "#81ad45");
+  return $("#front-page").show();
+};
+
+darkTheme = function() {
+  $(".blog").removeClass("light");
+  return $(".blog").addClass("dark");
+};
+
+lightTheme = function() {
+  $(".blog").removeClass("dark");
+  return $(".blog").addClass("light");
+};
+
 $(document).ready(function() {
-	checkHash();
+  return checkHash();
 });
 
-$(window).on('hashchange',function() {
- 	checkHash();
- });
+$(window).on("hashchange", function() {
+  return checkHash();
+});
 
 $("#dark-theme").click(darkTheme);
+
 $("#light-theme").click(lightTheme);
-
-function checkHash() {
-    if (window.location.hash === "#projects") {
-	    showprojects(); 
-	} else {
-		hideprojects();
-	}
-}
-
-function showprojects() {
-	$("#front-page").hide();
-	$("body.main").css("background-color", "#c46d46");
-	$("#projects").show();
-}
-
-function hideprojects() {
-	$("#projects").hide();
-	$("body.main").css("background-color", "#81ad45");
-	$("#front-page").show();
-}
-
-function darkTheme() {
-	$(".blog").removeClass('light');
-	$(".blog").addClass('dark');
-}
-
-function lightTheme() {
-	$(".blog").removeClass('dark');
-	$(".blog").addClass('light');
-}
-
-// function injectArticle() {
-// 	if (window.location.pathname == "/blog.html") {
-// 		$('#blog-posts').load('articles/test.html');
-// 	}
-// }

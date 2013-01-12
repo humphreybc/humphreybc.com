@@ -1,7 +1,7 @@
 exports.config =
-  # See docs at http://brunch.readthedocs.org/en/latest/config.html.
-  # paths:
-  #   ignored: /import/
+  modules:
+    definition: false
+    wrapper: false
   files:
     javascripts:
       defaultExtension: 'coffee'
