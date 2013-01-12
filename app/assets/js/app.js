@@ -1,13 +1,10 @@
 $(document).ready(function() {
 	checkHash();
-	// injectArticle();
 });
 
 $(window).on('hashchange',function() {
-	checkHash();
-});
-
-$("#view-projects-link").click(showprojects);
+ 	checkHash();
+ });
 
 $("#dark-theme").click(darkTheme);
 $("#light-theme").click(lightTheme);
@@ -21,15 +18,15 @@ function checkHash() {
 }
 
 function showprojects() {
-	$("#front-page").fadeOut(500);
+	$("#front-page").hide();
 	$("body.main").css("background-color", "#c46d46");
-	$("#projects").delay(500).fadeIn(500);
+	$("#projects").show();
 }
 
 function hideprojects() {
-	$("#projects").fadeOut(500);
+	$("#projects").hide();
 	$("body.main").css("background-color", "#81ad45");
-	$("#front-page").delay(500).fadeIn(500);
+	$("#front-page").show();
 }
 
 function darkTheme() {
