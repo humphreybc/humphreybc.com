@@ -10,13 +10,11 @@ checkHash = function() {
 
 showprojects = function() {
   $("#front-page").hide();
-  $("body.main").css("background-color", "#c46d46");
   return $("#projects").show();
 };
 
 hideprojects = function() {
   $("#projects").hide();
-  $("body.main").css("background-color", "#81ad45");
   return $("#front-page").show();
 };
 

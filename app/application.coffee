@@ -6,12 +6,10 @@ checkHash = ->
 
 showprojects = ->
   $("#front-page").hide()
-  $("body.main").css "background-color", "#c46d46"
   $("#projects").show()
 
 hideprojects = ->
   $("#projects").hide()
-  $("body.main").css "background-color", "#81ad45"
   $("#front-page").show()
 
 darkTheme = ->
@@ -21,7 +19,7 @@ darkTheme = ->
 lightTheme = ->
   $(".blog").removeClass "dark"
   $(".blog").addClass "light"
-  
+
 $(document).ready ->
   checkHash()
 

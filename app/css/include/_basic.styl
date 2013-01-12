@@ -1,45 +1,37 @@
 body
-  box-shadow inset 0px 3px 6px rgba(0,0,0,0.15) 
-  background-color green
+  background-color xlight-gray
   font-family fonts
-  color #fff
-  -webkit-font-smoothing antialised
+  font-weight 400
+  color gray
   padding 20px
   margin 0px
 
 a
-  color darken(green, 15)
+  color gray
   text-decoration none
-  transition all 100ms
+  font-weight bold
 
   &:hover
-    color darken(green, 30)
-
-#front-page
-
-  hr
-    background-color darken(green, 5)
-    border none
-    height 5px
-    margin 30px auto 40px
-
-  #footer-links a
-    color white
-
-    &:hover
-      color darken(green, 20)
+    color green
 
 h1
-  font-weight 300
-  font-size 28px
+  font-size font-huge
+  line-height font-huge
+  font-weight 400
+  margin 0px 0px 10px 0px
+  padding 0px
+  color green
+
+h2
+  font-size font-large
+  font-weight 400
   margin 0px
   padding 0px
 
-h2
-  font-weight 400
-  font-size font-large
-  margin 0px
-  padding 0px
+p
+  font-size font-medium
+  line-height font-medium * 1.5
+  padding-right 20px
 
 .container
   margin 20px auto
@@ -49,59 +41,41 @@ h2
 
 .bio
   overflow hidden
-  margin-top 20px
+  margin-top 10px
 
 .column 
   width 100%
   float left
 
-  p
-    font-size font-medium
-    line-height 32px
-    padding-right 20px
-
-h2
-  color #fff
-
 #social-icons
-  margin 40px 0px 0px
+  margin 20px 0px 0px
   overflow hidden
-
-  li:hover
-      a
-        color white !important
-        transition all 250ms
 
   a
     cursor pointer
-    transition all 250ms
     margin-right 20px
     float left
 
-@media screen and (min-width: 500px)
+#footer-links
+  margin-top 40px
 
-  h1
-    font-size font-huge
-    margin 0px 0px 0px -5px
-
-  h2
-    font-size font-medium
-
-  .role
-    font-size 11px !important
+@media screen and (min-width: 700px)
 
   .container
-    width 75%
+    width 85%
 
   .column
     width 50%
 
     p
       font-size font-small
-      line-height 28px
+      line-height font-small * 1.5
       padding-right 40px
 
 @media screen and (min-width: 1150px)
 
   .container
-    width 50%
+    width 70%
+
+  #blog-posts
+    width 60%
