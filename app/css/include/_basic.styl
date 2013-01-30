@@ -1,3 +1,7 @@
+.zero
+  margin 0px
+  padding 0px
+
 body
   background-color xlight-gray
   font-family fonts
@@ -5,6 +9,7 @@ body
   color gray
   padding 20px
   margin 0px
+  -webkit-font-smoothing antialiased
 
 a
   color gray
@@ -15,18 +20,16 @@ a
     color green
 
 h1
+  @extend .zero
   font-size font-huge
   line-height font-huge
   font-weight 400
-  margin 0px 0px 10px 0px
-  padding 0px
   color green
 
 h2
+  @extend .zero
   font-size font-large
   font-weight 400
-  margin 0px
-  padding 0px
 
 p
   font-size font-medium
