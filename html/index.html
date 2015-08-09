@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{MetaDescription}">
+  <meta name='text:Disqus Shortname' content=''>
+  
+  <title>{block:PostSummary}{PostSummary} - {/block:PostSummary} {title}</title>
+  
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" name="RSS" href="{RSS}">
+    <link rel="stylesheet" href="http://static.tumblr.com/ujgvtmr/tvknssl3c/humphreybc_style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="nav">
+                <a href="http://humphreybc.com" class="hbc-button">Blog</a>
+                <a href="http://humphreybc.com/about" class="hbc-button">About</a>
+                <a href="https://twitter.com/humphreybc" class="hbc-button">@humphreybc</a>
+            </div>
+        
+            <div class="post text about">   
+                <p>Good <span id="time"></span>!</p>
+                <p>{Description}</p>
+            </div>
+        </div> <!-- end .container -->
+    </div> <!-- end #header -->
+    
+    <div class="container">
+  
+    <ol id="posts">
+        <div class="autopagerize_page_element" >
+        {block:Posts}
+            {block:Text}
+                <li class="post text">
+                    {block:Title}
+                        <h1>
+                            <a href="{Permalink}" class="title-link">{Title}</a>
+                        </h1>
+                        <span class="date">{Month} {DayOfMonth}, {Year}</span>
+                        
+                    {/block:Title}
+
+                    {Body}
+                </li>
+            {/block:Text}
+
+            {block:Photo}
+                <li class="post photo">
+                    <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+
+                    {block:Caption}
+                        <div class="caption">{Caption}</div>
+                    {/block:Caption}
+                </li>
+            {/block:Photo}
+
+            {block:Panorama}
+                <li class="post panorama">
+                    {LinkOpenTag}
+                        <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                    {LinkCloseTag}
+
+                    {block:Caption}
+                        <div class="caption">{Caption}</div>
+                    {/block:Caption}
+                </li>
+            {/block:Panorama}
+
+            {block:Photoset}
+                <li class="post photoset">
+                    {Photoset-500}
+
+                    {block:Caption}
+                        <div class="caption">{Caption}</div>
+                    {/block:Caption}
+                </li>
+            {/block:Photoset}
+
+            {block:Quote}
+                <li class="post quote">
+                    "{Quote}"
+
+                    {block:Source}
+                        <div class="source">{Source}</div>
+                    {/block:Source}
+                </li>
+            {/block:Quote}
+
+            {block:Link}
+                <li class="post link">
+                    <h1><a href="{URL}" class="link" {Target}>{Name}</a></h1>
+
+                    {block:Description}
+                        <div class="description">{Description}</div>
+                    {/block:Description}
+                </li>
+            {/block:Link}
+
+            {block:Chat}
+                <li class="post chat">
+                    {block:Title}
+                        <h3><a href="{Permalink}">{Title}</a></h3>
+                    {/block:Title}
+
+                    <ul class="chat">
+                        {block:Lines}
+                            <li class="{Alt} user_{UserNumber}">
+                                {block:Label}
+                                    <span class="label">{Label}</span>
+                                {/block:Label}
+
+                                {Line}
+                            </li>
+                        {/block:Lines}
+                    </ul>
+                </li>
+            {/block:Chat}
+
+            {block:Video}
+                <li class="post video">
+                    {Video-500}
+
+                    {block:Caption}
+                        <div class="caption">{Caption}</div>
+                    {/block:Caption}
+                </li>
+            {/block:Video}
+
+            {block:Audio}
+                <li class="post audio">
+                    {AudioPlayerBlack}
+
+                    {block:Caption}
+                        <div class="caption">{Caption}</div>
+                    {/block:Caption}
+                </li>
+            {/block:Audio}
+            
+            <ul class="tags">
+            {block:PermalinkPage}
+                <li><a href="/" style="font-weight:bold;">&larr; Back</a></li>
+            {/block:PermalinkPage}
+                <li><a href="{Permalink}" style="font-weight:bold;">Permalink</a></li>
+                    {block:Tags}
+                        <li>
+                            <a href="{TagURL}">#{Tag}</a>
+                        </li>
+                    {/block:Tags}
+                {/block:HasTags} 
+            </ul>
+            
+        {/block:Posts}
+        </div>
+        {block:PermalinkPage}
+            {block:PostNotes} 
+                {PostNotes}
+            {/block:PostNotes}
+        {/block:PermalinkPage} 
+    </ol>
+    
+    </div> <!-- End of .container -->
+    
+    <script>
+
+      function greeting(){
+        var date = new Date();
+        var current_hour = date.getHours();
+    
+        if(current_hour < 12) {
+          return 'morning';
+        }
+    
+        if(current_hour < 16) {
+          return 'afternoon';
+        }
+    
+        return 'evening';
+      }
+    
+      document.getElementById("time").textContent=greeting();
+
+    </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="http://codysherman.com/tools/infinite-scrolling/code"></script>
+  
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-45773157-1', 'humphreybc.com');
+      ga('send', 'pageview');
+    </script>
+  
+</body>
+</html>
