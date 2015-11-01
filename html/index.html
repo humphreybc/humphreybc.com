@@ -185,6 +185,27 @@
     <script type="text/javascript" src="http://codysherman.com/tools/infinite-scrolling/code"></script>
     
     <script>
+
+      function greeting(){
+        var date = new Date();
+        var current_hour = date.getHours();
+    
+        if(current_hour < 12) {
+          return 'morning';
+        }
+    
+        if(current_hour < 17) {
+          return 'afternoon';
+        }
+    
+        return 'evening';
+      }
+    
+      document.getElementById("time").textContent=greeting();
+
+    </script>
+
+    <script>
         // Because Tumblr is stupid and doesn't allow 
         // high res images in text posts
         function highResImage() {
